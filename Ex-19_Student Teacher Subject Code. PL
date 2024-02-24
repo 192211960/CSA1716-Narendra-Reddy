@@ -1,0 +1,22 @@
+student(lisa).
+student(sam).
+student(william).
+
+teacher(prof_bot).
+teacher(prof_lara).
+teacher(prof_wanda).
+
+subject(math).
+subject(chemistry).
+subject(physics).
+
+code(1234).
+code(234).
+code(1245).
+
+teaches(lisa,prof_lara,math,1234).
+teaches(sam,prof_bot,chemistry,234).
+teaches(william,prof_wanda,physics,12345).
+
+db_students(Name,teacher,subject,code):-
+    teaches(Name,teacher,subject,code).
